@@ -7,22 +7,35 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <title>To-Do-List</title>
 </head>
 <body>
-  <h1>To-Do-List</h1>
-
-  <ul id="to-do"></ul>
-
-  <input id="new-element" type="text" placeholder="inserisci testo...">
-  <button class="add"> Aggiungi</button>
+  <div class="page-wrapper">
+    <main>
+        <div id="container">
+          <div class="title"><h1>To-Do-List</h1></div>
 
 
+          <!-- Lista -->
+          <div class="listone">
+            <ul id="to-do"></ul>
+          </div>
+
+          <!-- Barra input -->
+          <div id="inserimento">
+            <input id="new-element" type="text" placeholder="inserisci testo...">
+            <button class="add" onclick="style=border:0px;" > Aggiungi</button>
+          </div>
+      </div>
+    </main>
+  </div>
 <!-- Template con each -->
   <script id="list-template" type="text/x-handlebars-template">
-    <li id="{{id}}">{{text}} <span class="delete">X</span></li>
+    <li id="{{id}}">{{text}} <span class="delete">X</span> </li>
   </script>
 
   <script src="main.js" charset="utf-8"></script>
