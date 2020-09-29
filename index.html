@@ -28,14 +28,18 @@
           <!-- Barra input -->
           <div id="inserimento">
             <input id="new-element" type="text" placeholder="inserisci testo...">
-            <button class="add" onclick="style=border:0px;" > Aggiungi</button>
+            <button class="add"> Aggiungi</button>
           </div>
       </div>
     </main>
   </div>
 <!-- Template con each -->
   <script id="list-template" type="text/x-handlebars-template">
-    <li id="{{id}}">{{text}} <span class="delete">X</span> </li>
+    <li id="{{id}}"><div class="testo"><p>{{text}}</p></div>
+      <div class="icons">
+        <i class="fas fa-trash-alt delete"></i> <i class="fas fa-edit"></i>
+      </div>
+  </li>
   </script>
 
   <script src="main.js" charset="utf-8"></script>

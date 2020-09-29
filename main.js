@@ -21,7 +21,7 @@ $(document).ready(function(){
 
   $("#to-do").on("click", ".delete", function(){
     // Mi salvo in una variabile il valore dell'attributo id ignettato nel Template
-    var elment = $(this).parent();
+    var elment = $(this).parents("li");
     var id = elment.attr("id");
 
     // Chiamata di delete
@@ -58,7 +58,10 @@ $(document).ready(function(){
             "text": newDo
           },
           "success": function(data) {
+            // Stampo il campo input nella lista
             newDoCreated(data);
+
+            // Svuoto il campo input
             newDo = $("#new-element").val("");
           },
           "error": function () {
